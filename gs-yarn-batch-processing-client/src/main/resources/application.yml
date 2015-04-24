@@ -1,0 +1,13 @@
+spring:
+    hadoop:
+        fsUri: hdfs://tj-dev0.mgcorp.co:9000
+        resourceManagerHost: tj-dev0.mgcorp.co
+    yarn:
+        appName: gs-yarn-batch-processing
+        applicationDir: /app/gs-yarn-batch-processing/
+        client:
+            files:
+              - "file:gs-yarn-batch-processing-dist/gs-yarn-batch-processing-container-0.0.1.jar"
+              - "file:gs-yarn-batch-processing-dist/gs-yarn-batch-processing-appmaster-0.0.1.jar"
+            launchcontext:
+                archiveFile: gs-yarn-batch-processing-appmaster-0.0.1.jar
